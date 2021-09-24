@@ -66,6 +66,15 @@ module.exports = {
           },
         },
       },
+      {
+        version: "0.8.7",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },
+      },
     ],
   },
   contractSizer: {
@@ -89,26 +98,26 @@ module.exports = {
       initialBaseFeePerGas: 0,
       tags: ["test", "local"],
     },
-    bnb_testnet: {
-      url: "https://data-seed-prebsc-1-s1.binance.org:8545",
-      chainId: 97,
-      accounts: { mnemonic: BNB_TESTNET_MNEMONIC },
-      tags: ["staging"],
-    },
-    ropsten: {
-      url: `https://eth-ropsten.alchemyapi.io/v2/${ALCHEMY_API_KEY}`,
-      accounts: { mnemonic: ROPSTEN_MNEMONIC },
-      tags: ["staging"],
-    },
-    bnb_mainnet: {
-      url: "https://bsc-dataseed.binance.org/",
-      chainId: 56,
-      gasPrice: NETWORKS.gasPrice,
-      blockGasLimit: NETWORKS.blockGasLimit,
-      gasPrice: NETWORKS.gasPrice,
-      accounts: { mnemonic: BNB_MAINNET_MNEMONIC },
-      tags: ["product"],
-    },
+    // bnb_testnet: {
+    //   url: "https://data-seed-prebsc-1-s1.binance.org:8545",
+    //   chainId: 97,
+    //   accounts: { mnemonic: BNB_TESTNET_MNEMONIC },
+    //   tags: ["staging"],
+    // },
+    // ropsten: {
+    //   url: `https://eth-ropsten.alchemyapi.io/v2/${ALCHEMY_API_KEY}`,
+    //   accounts: { mnemonic: ROPSTEN_MNEMONIC },
+    //   tags: ["staging"],
+    // },
+    // bnb_mainnet: {
+    //   url: "https://bsc-dataseed.binance.org/",
+    //   chainId: 56,
+    //   gasPrice: NETWORKS.gasPrice,
+    //   blockGasLimit: NETWORKS.blockGasLimit,
+    //   gasPrice: NETWORKS.gasPrice,
+    //   accounts: { mnemonic: BNB_MAINNET_MNEMONIC },
+    //   tags: ["product"],
+    // },
   },
   etherscan: {
     apiKey: BSC_SCAN_KEY,
