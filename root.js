@@ -38,6 +38,6 @@ function nthRoot(_a,  _n, _dp,  _maxIts) {
     return xNew;
 }
 
-nthRoot(9,2,18,40);
+nthRoot(1024,5,18,40);
 
 

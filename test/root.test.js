@@ -23,15 +23,30 @@ describe("test address", async () => {
     console.log("root address : "+root.address);
     expect(root.address).to.not.equal(null);
   })
-  it("should calculate the second root of 9", async () => {
-    const [,liquidator] = await ethers.getSigners();
-    console.log("get second root of 9 : "+await root.nthRoot(9,2,18,40));
-    console.log("gas usage : ",await root.consumedGas.toString());
-    expect(root.address).to.not.equal(null);
+//   it("should calculate the second root of 9", async () => {
+//     const [,liquidator] = await ethers.getSigners();
+//     console.log("get second root of 9 : "+await root.nthRoot(9,2,18,40));
+//     console.log("gas usage : ",await root.consumedGas.toString());
+//     expect(root.address).to.not.equal(null);
+//   })
+  // it("should calculate the second root of 9*10**18", async () => {
+  //   const [,liquidator] = await ethers.getSigners();
+  //   const rootOfSys=await root.nthRoot(1024,5,18,40);
+  //   // console.log("get second root of 9 : "+rootOfSys.toString());
+  //   // console.log("gas usage : "+await root.consumedGas());
+  //   expect(root.address).to.not.equal(null);
   })
-  it("should calculate the second root of 9*10**18", async () => {
+//   it("should calculate the second root of biggest value 1**(237+18)", async () => {
+//     const [,liquidator] = await ethers.getSigners();
+//     const rootOfSys=await root.nthRoot(1024,5,18,40);
+//     console.log("get second root of 9 : "+rootOfSys.toString());
+//     console.log("gas usage : "+await root.consumedGas());
+//     expect(root.address).to.not.equal(null);
+//   })
+
+  it("should calculate the second root of biggest value 1**(237+18)", async () => {
     const [,liquidator] = await ethers.getSigners();
-    const rootOfSys=await root.nthRoot(90000000,2,18,40);
+    const rootOfSys=await root.nthRoot(1024,5,18,40);
     console.log("get second root of 9 : "+rootOfSys.toString());
     console.log("gas usage : "+await root.consumedGas());
     expect(root.address).to.not.equal(null);
