@@ -59,7 +59,7 @@ contract Root {
             ++iter;
              console.log("iter is : %s", iter);
             
-        }while ((x - xNew>10) && iter < _maxIts);
+        }while ((x > (xNew+1)) && iter < _maxIts);
 
         // Round to nearest in the last dp.
          console.log("nth root is", xNew);
