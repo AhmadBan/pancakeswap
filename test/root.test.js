@@ -35,7 +35,7 @@ describe("test address", async () => {
   //   // console.log("get second root of 9 : "+rootOfSys.toString());
   //   // console.log("gas usage : "+await root.consumedGas());
   //   expect(root.address).to.not.equal(null);
-  })
+ // })
 //   it("should calculate the second root of biggest value 1**(237+18)", async () => {
 //     const [,liquidator] = await ethers.getSigners();
 //     const rootOfSys=await root.nthRoot(1024,5,18,40);
@@ -44,11 +44,82 @@ describe("test address", async () => {
 //     expect(root.address).to.not.equal(null);
 //   })
 
-  it("should calculate the second root of biggest value 1**(237+18)", async () => {
+  it("(1024,5,5,20)", async () => {
     const [,liquidator] = await ethers.getSigners();
-    const rootOfSys=await root.nthRoot(1024,5,18,40);
-    console.log("get second root of 9 : "+rootOfSys.toString());
+    const rootOfSys=await root.nthRoot(1024,5,5,20);
+    console.log("gas usage : "+await root.consumedGas());
+    expect(root.address).to.not.equal(null);
+
+  })
+
+  it("(2048,5,5,20)", async () => {
+    const [,liquidator] = await ethers.getSigners();
+    const rootOfSys=await root.nthRoot(2048,5,5,20);
     console.log("gas usage : "+await root.consumedGas());
     expect(root.address).to.not.equal(null);
   })
+  it("(4096,5,5,20)", async () => {
+    const [,liquidator] = await ethers.getSigners();
+    const rootOfSys=await root.nthRoot(4096,5,5,20);
+    console.log("gas usage : "+await root.consumedGas());
+    expect(root.address).to.not.equal(null);
+  })
+
+  it("(8192,5,5,20)", async () => {
+    const [,liquidator] = await ethers.getSigners();
+    const rootOfSys=await root.nthRoot(8192,5,5,20);
+    console.log("gas usage : "+await root.consumedGas());
+    expect(root.address).to.not.equal(null);
+  })
+
+  it("(16384,5,5,20)", async () => {
+    const [,liquidator] = await ethers.getSigners();
+    const rootOfSys=await root.nthRoot(16384,5,5,20);
+    console.log("gas usage : "+await root.consumedGas());
+    expect(root.address).to.not.equal(null);
+  })
+
+  it("(10**4-1,5,5,20)", async () => {
+    const [,liquidator] = await ethers.getSigners();
+    const rootOfSys=await root.nthRoot(10**4-1,5,5,20);
+    console.log("gas usage : "+await root.consumedGas());
+    expect(root.address).to.not.equal(null);
+  })
+  it("(10**6-1,5,5,20)", async () => {
+    const [,liquidator] = await ethers.getSigners();
+    const rootOfSys=await root.nthRoot(10**6-1,5,5,20);
+    console.log("gas usage : "+await root.consumedGas());
+    expect(root.address).to.not.equal(null);
+  })
+  it("(10**8-1,5,5,20)", async () => {
+    const [,liquidator] = await ethers.getSigners();
+    const rootOfSys=await root.nthRoot(10**8-1,5,5,20);
+    console.log("gas usage : "+await root.consumedGas());
+    expect(root.address).to.not.equal(null);
+  })
+  it("(10**10-1,5,5,20)", async () => {
+    const [,liquidator] = await ethers.getSigners();
+    const rootOfSys=await root.nthRoot(10**10-1,5,5,20);
+    console.log("gas usage : "+await root.consumedGas());
+    expect(root.address).to.not.equal(null);
+  })
+  it("(10**15-1,5,5,20)", async () => {
+    const [,liquidator] = await ethers.getSigners();
+    const rootOfSys=await root.nthRoot(10**15-1,5,5,20);
+    console.log("gas usage : "+await root.consumedGas());
+    expect(root.address).to.not.equal(null);
+  })
+  it("(10**14,5,5,20)", async () => {
+    const [,liquidator] = await ethers.getSigners();
+    const rootOfSys=await root.nthRoot(10**14,5,5,20);
+    console.log("gas usage : "+await root.consumedGas());
+    expect(root.address).to.not.equal(null);
+  })
+  it("(2**16,5,5,20)", async () => {
+    const [,liquidator] = await ethers.getSigners();
+    const rootOfSys=await root.nthRoot(2**16,5,5,20);
+    console.log("gas usage : "+await root.consumedGas());
+    expect(root.address).to.not.equal(null);
+  })
+
 })
